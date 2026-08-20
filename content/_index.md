@@ -103,24 +103,25 @@ sections:
       title: Services
       subtitle: ''
       text: |-
-        ## **Journal Reviewer**
-        - [IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
-        - [ACM Computing Surveys](https://dl.acm.org/journal/csur)
-        - [Computer Networks - Elsevier](https://www.journals.elsevier.com/computer-networks)
-        - [Information Systems - Elsevier](https://www.journals.elsevier.com/information-systems)
-        - [IEEE Access](https://ieeeaccess.ieee.org/)
-        - [International Journal of Network Management](https://onlinelibrary.wiley.com/journal/10991190)
-        - [IEEE Communications Magazine](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=35)
-        - [Journal of Information Security and Applications - Elsevier](https://www.journals.elsevier.com/journal-of-information-security-and-applications)
-        - [Peer J Computer Science](https://peerj.com/computer-science/)
+        ## **Membership**
+        - Asia Pacific Advanced Network (APAN) - Security Working Group, *Chair*
+        - Institute of Electrical and Electronics Engineers (IEEE), *Member*
+        - Malaysian Research and Education Network (MyREN) - Internet Security Working Group, *Deputy Head*
+        - Malaysian Board of Technologists (MBOT), *Professional Technologist*
 
-        ## **TPC/Reviewer**
-        - Center for Communication, Media and Information technologies (CMI), Aalborg University - [2019](https://www.conf.cmi.aau.dk/12th+CMI+conference+2019/)
-        - International Conference on Advances in Computing, Communication & Automation (ICACCA) - 2018
-        - International Conference on Parallel, Distributed and Grid Computing (PDGC) - [2018](http://www.juit.ac.in/pdgc-2018/index1.php)
-        - International Conference on Availability, Reliability and Security (ARES) - [2017](https://www.ares-conference.eu/ares2017/conference2017/index.html), [2020](https://www.ares-conference.eu/)
-        - International Conference on Computing and Informatics (ICOCI) - [2017](http://www.icoci.cms.net.my/icoci2017/)
-        - IEEE/IFIP Workshop on Security for Emerging Distributed Network Technologies (DISSECT) - [2017](http://www.inf.ufrgs.br/dissect/2017/), [2020](http://www.inf.ufrgs.br/dissect/2020/)
+        ## **Journal Reviewer**
+        - [ACM Computing Surveys (CSUR)](https://dl.acm.org/journal/csur)
+        - [IEEE Transactions on Information Forensics & Security (T-IFS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
+        - [IEEE Journal on Selected Areas in Communications (JSAC)](https://www.comsoc.org/publications/journals/ieee-jsac)
+        - [PeerJ Computer Science](https://peerj.com/computer-science/)
+        - [Journal of Information Security and Applications (JISA) - Elsevier](https://www.journals.elsevier.com/journal-of-information-security-and-applications)
+        - [Computers and Electrical Engineering - Elsevier](https://www.journals.elsevier.com/computers-and-electrical-engineering)
+
+        ## **Committees**
+        - MRANTI Cybersecurity Technical Advisory Panel, AV Living Lab
+        - USM Mobile Access Coordinator (COVID-19)
+        - USM Industry Liaison Fellow
+        - USM Cyber Security Awareness Program - Subject Matter Expert
     design:
       columns: '2'
   - block: collection
@@ -131,6 +132,8 @@ sections:
         folders:
           - publications
         exclude_featured: false
+      count: 8
+      order: desc
     design:
       view: article-grid
       columns: 3
@@ -172,8 +175,6 @@ sections:
         **Email:** [kshankar@usm.my](mailto:kshankar@usm.my)
 
         **Phone:** +604 653 4632
-
-        **Address:** National Advanced IPv6 Centre (NAv6), Level 6, School of Computer Sciences Building, Universiti Sains Malaysia, 11800 USM, Penang, Malaysia
 
         **Book an appointment:** [calendly.com/kshankar_usm](https://calendly.com/kshankar_usm)
 

@@ -13,15 +13,19 @@ postnominals:
   - PhD
 status:
   icon: ""
-role: Senior Lecturer
+role: Associate Professor
 bio: |
-  Shankar Karuppayah is currently a [Senior Lecturer at the National Advanced IPv6 Centre (NAv6), Universiti Sains Malaysia](https://www.nav6.usm.my/about-us/people/shankar-karuppayah/) since 2016.
+  Shankar Karuppayah is an Associate Professor and Deputy Director at the [Cybersecurity Research Centre (CYRES), Universiti Sains Malaysia (USM)](https://www.cyres.usm.my) — formerly the National Advanced IPv6 Centre (NAv6), which he joined as Senior Lecturer in 2016 and which was renamed CYRES in January 2025. He is also the Founder & CEO of [BitRanger Sdn. Bhd.](https://www.bitranger.io), a USM cybersecurity spin-off established in October 2023 that translates research and innovation from USM/CYRES into operational cybersecurity capabilities, including OwlSight, an outsourced Security Operations Centre platform.
 
-  He obtained his B.Sc (HONS) Computer Science from Universiti Sains Malaysia in 2009 and his M.Sc. Software Systems Engineering from King Mongkut's University of Technology North Bangkok (KMUTNB) in 2011. In 2016, Shankar Karuppayah obtained his PhD (Dr. rer. nat.) from TU Darmstadt with his dissertation titled "Advanced Monitoring in P2P Botnets".
+  He obtained his B.Sc (HONS) Computer Science from Universiti Sains Malaysia in 2009 and his M.Sc. Software Systems Engineering from King Mongkut's University of Technology North Bangkok (KMUTNB) in 2011. In 2016, Shankar obtained his PhD (Dr. rer. nat.) from TU Darmstadt, where his research on advanced techniques for monitoring peer-to-peer botnets later formed the basis of his Springer book, *Advanced Monitoring in P2P Botnets: A Dual Perspective*.
+
+  His research has since expanded from P2P botnet monitoring and malware analysis into broader areas including intrusion detection, cyber threat intelligence, machine learning for cybersecurity, IoT and cyber-physical security, network security monitoring, and the translation of cybersecurity research into deployable, operational technologies.
 
 affiliations:
-  - name: National Advanced IPv6 Centre (NAv6), Universiti Sains Malaysia (USM)
-    url: https://www.nav6.usm.my
+  - name: Cybersecurity Research Centre (CYRES), Universiti Sains Malaysia (USM)
+    url: https://www.cyres.usm.my
+  - name: BitRanger Sdn. Bhd.
+    url: https://www.bitranger.io
 
 links:
   - icon: at-symbol
@@ -33,24 +37,30 @@ links:
   - icon: brands/x
     url: https://twitter.com/sh_nk_r
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=hB67snYAAAAJ&hl=en
+    url: https://scholar.google.com.my/citations?user=hB67snYAAAAJ
   - icon: academicons/orcid
     url: https://orcid.org/0000-0003-4801-6370
+  - icon: academicons/scopus
+    url: https://www.scopus.com/authid/detail.uri?authorId=55948061900
+  - icon: academicons/publons
+    url: https://www.webofscience.com/wos/author/record/AAE-3990-2019
   - icon: academicons/dblp
     url: https://dblp.org/pers/hd/k/Karuppayah:Shankar
 
 interests:
-  - Malware Analysis
-  - Botnet Monitoring
-  - Distributed Systems
-  - Internet of Things
+  - Cyber Threat Intelligence & Botnet Monitoring
+  - Intrusion Detection & Network Security Monitoring
+  - AI / Machine Learning for Cybersecurity
+  - IoT & Cyber-Physical System Security
+  - Security Operations Centres (SOC)
+  - Cybersecurity Research Commercialisation
 
 education:
   - degree: PhD in Computer Science (Cyber Security)
     institution: Technische Universität Darmstadt, Germany
     end: 2016-12-31
     summary: |
-      Dissertation: "Advanced Monitoring in P2P Botnets".
+      Dissertation: "Advanced Monitoring in P2P Botnets". Supervisor: Prof. Dr. Max Mühlhäuser.
   - degree: MSc in Software Systems Engineering
     institution: RWTH Aachen, Germany & King Mongkut's University of Technology North Bangkok, Thailand
     end: 2011-12-31
@@ -59,6 +69,33 @@ education:
     end: 2009-12-31
 
 experience:
+  - role: Associate Professor
+    org: Cybersecurity Research Centre (CYRES), Universiti Sains Malaysia
+    start: 2024-10-01
+    summary: |
+      Academic activities encompass cybersecurity research, postgraduate supervision, teaching, research grant acquisition, industrial collaboration, cybersecurity training, and technology commercialisation.
+  - role: Deputy Director
+    org: Cybersecurity Research Centre (CYRES), Universiti Sains Malaysia
+    start: 2023-01-01
+    summary: |
+      Contributing to the development of CYRES' cybersecurity research, innovation, industry engagement, capacity-building, and international collaboration activities.
+  - role: Founder & CEO
+    org: BitRanger Sdn. Bhd.
+    start: 2023-10-01
+    summary: |
+      A USM cybersecurity spin-off translating research and innovation into operational cybersecurity capabilities, including security monitoring, vulnerability assessment, penetration testing, threat intelligence, cybersecurity consulting, and cybersecurity training. Key technology: OwlSight, an outsourced Security Operations Centre platform (Gold Medal, ITEX 2026).
+  - role: Senior Lecturer
+    org: National Advanced IPv6 Centre (NAv6), Universiti Sains Malaysia
+    start: 2016-06-01
+    end: 2024-09-30
+    summary: |
+      Responsibilities include:
+
+      * Research in Cyber Security and Internet of Things
+      * Grant and project acquisitions
+      * Teaching and supervision of M.Sc. and Ph.D. students
+      * Carry out industrial consultation projects
+      * Carry out national/international security trainings and workshops
   - role: Area Head - Smart Protection in Infrastructures and Networks (SPIN)
     org: Telecooperation Group, Technische Universität Darmstadt
     start: 2021-01-01
@@ -79,17 +116,6 @@ experience:
       * Grant and project acquisitions
       * Scientific coordination of both national and international research projects
       * Teaching and supervision of B.Sc., M.Sc., and Ph.D. students
-  - role: Senior Lecturer
-    org: National Advanced IPv6 Centre (NAv6), Universiti Sains Malaysia
-    start: 2016-06-01
-    summary: |
-      Responsibilities include:
-
-      * Research in Cyber Security and Internet of Things
-      * Grant and project acquisitions
-      * Teaching and supervision of M.Sc. and Ph.D. students
-      * Carry out industrial consultation projects
-      * Carry out national/international security trainings and workshops
   - role: Researcher
     org: Telecooperation Group, Technische Universität Darmstadt
     start: 2012-10-01
@@ -111,6 +137,10 @@ experience:
       * Conducting simulation and evaluation of WMNs
 
 awards:
+  - title: ITEX 2026 Gold Medal
+    awarder: 37th International Invention, Innovation and Technology Exhibition (ITEX 2026)
+    date: "2026-01-01"
+    summary: Awarded for OwlSight - Outsourced Security Operation Centre for SMEs, as part of USM's innovation showcase.
   - title: DAAD Scholarship
     awarder: German Academic Exchange Service (DAAD)
     date: "2009-07-01"

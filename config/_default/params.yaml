@@ -15,13 +15,13 @@ hugoblox:
     # Site name - shown in navbar, footer, copyright, and browser title by default
     name: "Shankar Karuppayah"
     # Legal entity for copyright notices (defaults to name if not set)
-    organization: "National Advanced IPv6 Centre (NAv6), Universiti Sains Malaysia"
+    organization: "Cybersecurity Research Centre (CYRES), Universiti Sains Malaysia"
     # Schema.org type for structured data
     type: person # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: "Senior Lecturer, National Advanced IPv6 Centre (NAv6), USM"
+    tagline: "Associate Professor & Deputy Director, CYRES, USM | Founder & CEO, BitRanger"
     # Site meta description for search engines and social sharing
-    description: "Malware analysis, botnet monitoring, distributed systems and Internet of Things research by Shankar Karuppayah, Senior Lecturer at NAv6, Universiti Sains Malaysia."
+    description: "Cybersecurity research and commercialisation by Shankar Karuppayah - Associate Professor & Deputy Director at CYRES, Universiti Sains Malaysia, and Founder & CEO of BitRanger."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "sh_nk_r" # Twitter/X handle for Twitter Cards (without @)
