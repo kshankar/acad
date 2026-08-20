@@ -11,7 +11,9 @@ A NAHRIM funded project to design, develop and deploy a water/soil/air quality e
 
 This NAHRIM funded-project aims to investigate, design, develop and deploy an environmental monitoring system focusing on water/soil/air quality for NAHRIM. This project brings in the expertise of several departments/faculties within USM.
 
-Project Duration: **01/05/2020-28/02/2021**
+Project Duration: **01/05/2020-30/06/2022**
+
+Funding: RM 268,000.00 (External Agency, Government)
 
 Project Member:
 - Prof. Ir. Dr. Md Azlin Bin Md. Said (PI)

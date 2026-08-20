@@ -10,3 +10,11 @@ A project to study and propose designs as solution to the technical problems fac
 <!--more-->
 
 Industry Grant (Co-Researcher).
+
+Project Duration: **26/07/2021-31/12/2022**
+
+Funding: RM 100,000.00 (External Agency, Industry/Private)
+
+Project Member:
+- Assoc. Prof. Dr. Selvakumar Manickam (PI)
+- Dr. Shankar Karuppayah

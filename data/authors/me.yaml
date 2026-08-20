@@ -137,10 +137,38 @@ experience:
       * Conducting simulation and evaluation of WMNs
 
 awards:
+  - title: ITEX 2026 Special Award
+    awarder: Japan Intellectual Property Association, International Invention, Innovation & Technology Competition 2026
+    date: "2026-01-01"
+    summary: Awarded for OwlSight - Outsourced Security Operation Centre for SMEs.
   - title: ITEX 2026 Gold Medal
-    awarder: 37th International Invention, Innovation and Technology Exhibition (ITEX 2026)
+    awarder: Malaysian Invention and Design Society, International Invention, Innovation & Technology Competition 2026
     date: "2026-01-01"
     summary: Awarded for OwlSight - Outsourced Security Operation Centre for SMEs, as part of USM's innovation showcase.
+  - title: Pingat Jasa Kebaktian (PJK)
+    awarder: Penang State Government
+    date: "2025-01-01"
+    summary: A Malaysian state honour awarded for meritorious service.
+  - title: International Innovation Award
+    awarder: Malaysia Technology Expo 2024
+    date: "2024-01-01"
+    summary: International Innovation Award at the Malaysia Technology Expo 2024.
+  - title: APAN Fellowship
+    awarder: Asia Pacific Advanced Network (APAN)
+    date: "2023-01-01"
+    summary: Fellowship awarded by the Asia Pacific Advanced Network, held in Sri Lanka.
+  - title: MTE 2024 Silver Medal
+    awarder: Malaysia Technology Expo (MTE) 2024
+    date: "2024-01-01"
+    summary: Silver Medal at the Malaysia Technology Expo 2024.
+  - title: Pitch@USM Cycle 1
+    awarder: Universiti Sains Malaysia
+    date: "2022-01-01"
+    summary: Recognition at Universiti Sains Malaysia's Pitch@USM Cycle 1, 2022.
+  - title: HRD Corp Accredited Trainer
+    awarder: Human Resource Development Corporation (HRD Corp)
+    date: "2023-03-10"
+    summary: Professional trainer status accredited by HRD Corp (10/03/2023 – 10/03/2026).
   - title: DAAD Scholarship
     awarder: German Academic Exchange Service (DAAD)
     date: "2009-07-01"

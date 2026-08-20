@@ -13,7 +13,9 @@ This project explores the usage of graph-theoretic approaches to detect sensor n
 
 Project Duration: **01/12/2016-30/11/2018**
 
-Grant No: **304/PNAV/6313332**
+Grant No: **304/PNAV/6313332** (Short Term - Academic Staff)
+
+Funding: RM 27,407.00
 
 Project Members:
 - Dr. Shankar Karuppayah (PI)

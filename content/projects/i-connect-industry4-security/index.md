@@ -11,3 +11,13 @@ An industrial research project to design and propose a lightweight AI-powered ID
 <!--more-->
 
 Industry Grant (Co-Researcher).
+
+Project Duration: **01/01/2025-30/12/2026**
+
+Funding: RM 407,600.00 (External Agency, Industry/Private)
+
+Project Member:
+- Assoc. Prof. Dr. Selvakumar Manickam (PI)
+- Dr. Shankar Karuppayah
+- Dr. Lokman Mohd Fadzil
+- Mohd Najwadi Yusoff

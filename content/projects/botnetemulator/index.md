@@ -15,7 +15,9 @@ The main objectives defined to achieve the goal of this research are:
 
 Project Duration: **01/09/2021-31/08/2023**
 
-Grant No: **USM Short Term Grant 304/PNAV/6313332**
+Grant No: **USM Short Term Grant 304/PNAV/6313332** (Short Term - Academic Staff)
+
+Funding: RM 21,700.00; actual project duration 01/09/2021-28/02/2024
 
 ### Project Members:
  - Dr. Shankar Karuppayah (PI)

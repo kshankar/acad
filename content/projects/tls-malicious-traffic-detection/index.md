@@ -10,3 +10,13 @@ An international collaborative research project to design a research platform to
 <!--more-->
 
 International Grant (Project Leader).
+
+Project Duration: **14/12/2023-14/06/2025**
+
+Funding: RM 183,000.00 (External Agency, International)
+
+Project Member:
+- Dr. Shankar Karuppayah (PI)
+- Assoc. Prof. Dr. Selvakumar Manickam
+- Dr. Mohammed F.R. Anbar
+- Mithiiran Parthipan

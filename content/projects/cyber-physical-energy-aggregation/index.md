@@ -10,3 +10,11 @@ A study and design on cyber-physical security design for energy aggregation doma
 <!--more-->
 
 International Grant (Co-Researcher).
+
+Project Duration: **01/09/2021-31/08/2022**
+
+Funding: RM 21,085.00 (External Agency, International)
+
+Project Member:
+- Assoc. Prof. Dr. Selvakumar Manickam (PI)
+- Dr. Shankar Karuppayah
