@@ -132,7 +132,8 @@ sections:
           - publications
         exclude_featured: false
     design:
-      view: citation
+      view: article-grid
+      columns: 3
   - block: collection
     id: news
     content:
