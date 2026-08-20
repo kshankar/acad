@@ -2,6 +2,7 @@
 title: Open Vacancies
 summary: There are always open positions for interested postgraduate candidates throughout the year - some come with funding support tied to ongoing research grants.
 date: 2021-09-23
+draft: true
 
 authors:
   - me

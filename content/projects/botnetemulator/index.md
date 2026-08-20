@@ -25,11 +25,3 @@ Funding: RM 21,700.00; actual project duration 01/09/2021-28/02/2024
 ### Collaborators (TU Darmstadt):
  - Prof. Dr. Max Mühlhäuser
  - M.Sc. Leon Böck
-
-### Open Positions:
-- MSc by Research (Full Time) - Stipend Available (Sept 2021 - Aug 2023)
-  - Requirements:
-    - Bachelor's degree in Computer Science/Electric & Electronic Engineering, Computer Engineering/Information Technology or equivalent.
-    - A minimum CGPA of 2.75/4.0 or equivalent.
-    - Good understanding of the fundamentals of (computer) networking
-    - \[Optional\] Experience in Reverse Engineering and/or OpenStack deployments are advantageous

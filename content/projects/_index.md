@@ -13,6 +13,7 @@ sections:
         folders:
           - projects
       count: 0
+      order: desc
     design:
       view: article-grid
       fill_image: false

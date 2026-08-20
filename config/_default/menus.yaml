@@ -31,9 +31,6 @@ main:
   - name: Services
     url: /#services
     weight: 70
-  - name: Open Positions
-    url: open-positions/
-    weight: 80
   - name: Contact
     url: /#contact
     weight: 90

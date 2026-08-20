@@ -1,6 +1,7 @@
 ---
 title: "M.Sc Postgraduate Position Funded by Universiti Sains Malaysia's Short Term Grant (STG)"
 date: 2021-09-07
+draft: true
 ---
 # Project Title: **An advanced network manipulation method to (re)establish Peer-to-Peer botnet overlays within isolated Internet emulation testbeds**
 
