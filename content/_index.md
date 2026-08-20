@@ -56,7 +56,7 @@ sections:
       title: Talks & Invited Presentations
       subtitle: ''
       text: |-
-        Selected international invited talks and keynotes. *(See [Recognition](#accomplishments) for a fuller list of professional service and committee roles.)*
+        Selected international invited talks and keynotes. *(See [Services](#services) for a fuller list of professional service and committee roles, or [Accomplishments](#accomplishments) for awards and recognitions.)*
 
         - **2026** — "Cybersecurity Awareness" (Ceramah Kesedaran Keselamatan Siber), Penang International Halal Expo (PIHEX) 2026, Politeknik Seberang Perai
         - **2025** — "Cybersecurity Concerns for Energy Domain", ERIA/ERAB Cyber and Physical System Security Workshop, Kuala Lumpur
