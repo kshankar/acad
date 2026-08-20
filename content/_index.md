@@ -33,18 +33,6 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-
-        Please reach out to collaborate 😃
-    design:
-      columns: '1'
   - block: collection
     id: papers
     content:
@@ -54,8 +42,87 @@ sections:
           - publications
         featured_only: true
     design:
-      view: article-grid
-      columns: 2
+      view: card
+      columns: 3
+  - block: resume-awards
+    id: accomplishments
+    content:
+      title: Accomplishments
+      username: me
+  - block: markdown
+    id: teaching
+    content:
+      title: Teaching and Supervision
+      subtitle: ''
+      text: |-
+        ## **2020 @ TU Darmstadt**
+        - PNS: Protection in Networked Systems ‒ Trust, Resilience, and Privacy
+        - Seminar: Protection in Infrastructures and Networks (PIN)
+            - Topic supervisor
+        - Thesis Supervision
+        - Bachelor Students Traineeship / Bachelorpraktikum
+        - Internet Praktikum
+
+        ## **2019**
+        - Introduction To Real Time Operating Systems And Applications
+        - Internet Governance
+        - Internet Security
+        - Dissertation
+
+        ## **2018**
+        - Introduction To Real Time Operating Systems And Applications
+        - Special Topics in Next Generation Internet
+        - Dissertation
+        - Final Year Project - CS@USM
+        - Internship / Research Project
+
+        ## **2017**
+        - Introduction To Real Time Operating Systems And Applications
+        - Special Topics in Next Generation Internet
+        - Internet Communications Protocol
+        - Dissertation
+        - Final Year Project - CS@USM
+        - Internship / Research Project
+
+        ## **2016 @ USM**
+        - Internet Communications Protocol
+        - Final Year Project - CS@USM
+        - Internship / Research Project
+
+        ## **Prior to 2016 @ TU Darmstadt**
+        - Simulation and Evaluation of Computer Networks (SECoN)
+        - Seminar Telekooperation
+        - Seminar Security, Privacy, and Trust
+        - Projectpraktikum
+        - Bachelor Students Traineeship / Bachelorpraktikum
+    design:
+      columns: '2'
+  - block: markdown
+    id: services
+    content:
+      title: Services
+      subtitle: ''
+      text: |-
+        ## **Journal Reviewer**
+        - [IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
+        - [ACM Computing Surveys](https://dl.acm.org/journal/csur)
+        - [Computer Networks - Elsevier](https://www.journals.elsevier.com/computer-networks)
+        - [Information Systems - Elsevier](https://www.journals.elsevier.com/information-systems)
+        - [IEEE Access](https://ieeeaccess.ieee.org/)
+        - [International Journal of Network Management](https://onlinelibrary.wiley.com/journal/10991190)
+        - [IEEE Communications Magazine](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=35)
+        - [Journal of Information Security and Applications - Elsevier](https://www.journals.elsevier.com/journal-of-information-security-and-applications)
+        - [Peer J Computer Science](https://peerj.com/computer-science/)
+
+        ## **TPC/Reviewer**
+        - Center for Communication, Media and Information technologies (CMI), Aalborg University - [2019](https://www.conf.cmi.aau.dk/12th+CMI+conference+2019/)
+        - International Conference on Advances in Computing, Communication & Automation (ICACCA) - 2018
+        - International Conference on Parallel, Distributed and Grid Computing (PDGC) - [2018](http://www.juit.ac.in/pdgc-2018/index1.php)
+        - International Conference on Availability, Reliability and Security (ARES) - [2017](https://www.ares-conference.eu/ares2017/conference2017/index.html), [2020](https://www.ares-conference.eu/)
+        - International Conference on Computing and Informatics (ICOCI) - [2017](http://www.icoci.cms.net.my/icoci2017/)
+        - IEEE/IFIP Workshop on Security for Emerging Distributed Network Technologies (DISSECT) - [2017](http://www.inf.ufrgs.br/dissect/2017/), [2020](http://www.inf.ufrgs.br/dissect/2020/)
+    design:
+      columns: '2'
   - block: collection
     content:
       title: Recent Publications
@@ -66,15 +133,6 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
   - block: collection
     id: news
     content:
@@ -104,24 +162,34 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the HugoBlox Kit demo site
+  # NOTE: exact field names below are a best-effort translation from the previous
+  # site's Contact widget + params.toml contact details - please double check this
+  # section renders correctly and adjust field names if needed.
+  - block: contact
+    id: contact
     content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by HugoBlox Kit - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-
-        <a class="github-button" href="https://github.com/HugoBlox/kit" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/kit on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
+      title: Contact
+      subtitle: ''
+      text: ''
+      email: kshankar@usm.my
+      phone: '+604 653 4632'
+      address:
+        street: 'National Advanced IPv6 Centre (NAv6), Level 6, School of Computer Sciences Building, Universiti Sains Malaysia'
+        city: USM
+        region: Penang
+        postcode: '11800'
+        country: Malaysia
+      coordinates:
+        latitude: 5.354623
+        longitude: 100.301446
+      appointment_url: https://calendly.com/kshankar_usm
+      links:
+        - icon: brands/skype
+          url: 'skype:shankar.karuppayah?call'
+          label: Skype Me
+        - icon: brands/telegram
+          url: https://telegram.me/@skusm
+          label: Telegram Me
     design:
-      card:
-        # Card background color (CSS class)
-        css_class: 'bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-600 text-white shadow-2xl'
-        css_style: ''
+      columns: '2'
 ---
