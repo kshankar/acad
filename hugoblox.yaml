@@ -1,5 +1,9 @@
 build:
-  hugo_version: "0.162.0"
+  # Pinned to 0.161.1 (not 0.162.0) to avoid a confirmed Hugo 0.162.0 regression in
+  # Scratch.SetInMap ("assignment to entry in nil map") that breaks this module's
+  # build_links.html on every publication page. 0.161.1 is also this workflow's own
+  # documented fallback "known stable version" - see .github/workflows/build.yml.
+  hugo_version: "0.161.1"
 deploy:
   # Deployment target: github-pages, netlify, vercel, cloudflare, or none
   host: 'github-pages'
