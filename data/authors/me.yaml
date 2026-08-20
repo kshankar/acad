@@ -7,7 +7,7 @@ name:
   family: Karuppayah
   alternate: ''
   pronunciation: ''
-  pronouns: he/him
+  pronouns: ''
 postnominals:
   - Ts.
   - PhD
@@ -31,11 +31,6 @@ links:
   - icon: at-symbol
     url: mailto:kshankar@usm.my
     label: E-mail Me
-  - icon: hero/key
-    url: /uploads/shankar.karuppayah.asc
-    label: PGP Public Key
-  - icon: brands/x
-    url: https://twitter.com/sh_nk_r
   - icon: academicons/google-scholar
     url: https://scholar.google.com.my/citations?user=hB67snYAAAAJ
   - icon: academicons/orcid
