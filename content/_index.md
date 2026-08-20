@@ -163,34 +163,23 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
-  # NOTE: exact field names below are a best-effort translation from the previous
-  # site's Contact widget + params.toml contact details - please double check this
-  # section renders correctly and adjust field names if needed.
-  - block: contact
+  - block: markdown
     id: contact
     content:
       title: Contact
       subtitle: ''
-      text: ''
-      email: kshankar@usm.my
-      phone: '+604 653 4632'
-      address:
-        street: 'National Advanced IPv6 Centre (NAv6), Level 6, School of Computer Sciences Building, Universiti Sains Malaysia'
-        city: USM
-        region: Penang
-        postcode: '11800'
-        country: Malaysia
-      coordinates:
-        latitude: 5.354623
-        longitude: 100.301446
-      appointment_url: https://calendly.com/kshankar_usm
-      links:
-        - icon: brands/skype
-          url: 'skype:shankar.karuppayah?call'
-          label: Skype Me
-        - icon: brands/telegram
-          url: https://telegram.me/@skusm
-          label: Telegram Me
+      text: |-
+        **Email:** [kshankar@usm.my](mailto:kshankar@usm.my)
+
+        **Phone:** +604 653 4632
+
+        **Address:** National Advanced IPv6 Centre (NAv6), Level 6, School of Computer Sciences Building, Universiti Sains Malaysia, 11800 USM, Penang, Malaysia
+
+        **Book an appointment:** [calendly.com/kshankar_usm](https://calendly.com/kshankar_usm)
+
+        **Other ways to reach me:**
+        - [Skype](skype:shankar.karuppayah?call)
+        - [Telegram](https://telegram.me/@skusm)
     design:
-      columns: '2'
+      columns: '1'
 ---
