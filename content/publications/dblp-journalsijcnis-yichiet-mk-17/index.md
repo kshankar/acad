@@ -18,6 +18,9 @@ summary: ''
 tags: []
 featured: false
 
+hugoblox:
+  ids: {}
+
 links:
   - type: pdf
     url: http://www.ijcnis.org/index.php/ijcnis/article/view/2368
