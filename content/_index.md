@@ -41,6 +41,7 @@ sections:
         folders:
           - publications
         featured_only: true
+      count: 0
     design:
       view: card
       columns: 3
