@@ -9,7 +9,7 @@ sections:
       title: Postgraduate Supervision
       subtitle: ''
       text: |-
-        A record of the postgraduate researchers I have supervised (as Main or Co-Supervisor), spanning intrusion detection, IoT/industrial security, botnet research, federated learning, and related cybersecurity domains. *Country/nationality indicators will be added once available.*
+        A record of the postgraduate researchers I have supervised (as Main or Co-Supervisor), spanning intrusion detection, IoT/industrial security, botnet research, federated learning, and related cybersecurity domains.
 
         Sorted by (start) year, then alphabetically by name within each year.
 
