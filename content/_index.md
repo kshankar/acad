@@ -208,14 +208,13 @@ sections:
       title: Contact
       subtitle: ''
       text: |-
-        **Email:** [kshankar@usm.my](mailto:kshankar@usm.my)
+        **Email:** kshankar [at] usm [dot] my
 
         **Phone:** +604 653 4632
 
         **Book an appointment:** [calendly.com/kshankar_usm](https://calendly.com/kshankar_usm)
 
         **Other ways to reach me:**
-        - [Skype](skype:shankar.karuppayah?call)
         - [Telegram](https://telegram.me/@skusm)
     design:
       columns: '1'
