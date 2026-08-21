@@ -44,7 +44,7 @@ sections:
       count: 0
     design:
       view: card
-      columns: 3
+      columns: 2
   - block: resume-awards
     id: accomplishments
     content:
