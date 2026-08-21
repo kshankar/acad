@@ -41,10 +41,11 @@ sections:
         folders:
           - publications
         featured_only: true
-      count: 0
+      count: 3
+      order: desc
     design:
-      view: card
-      columns: 2
+      view: article-grid
+      columns: 3
   - block: resume-awards
     id: accomplishments
     content:
