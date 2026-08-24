@@ -2,38 +2,41 @@
 #   To link a homepage widget, specify the URL as a hash `#` followed by the
 #     `id:` of the desired block in `content/_index.md`.
 #   The weight parameter defines the order that the links will appear in.
+#   Ordered roughly by expected visitor importance: identity/publications first,
+#   supporting/service content in the middle, teaching & supervision (mainly
+#   relevant to current/prospective students) pushed toward the end.
 
 main:
   - name: Home
     url: /
     weight: 10
-  - name: Experience
-    url: experience/
-    weight: 20
   - name: Publications
     url: publications/
-    weight: 30
+    weight: 20
   - name: Accomplishments
     url: /#accomplishments
-    weight: 40
-  - name: Talks
-    url: /#talks
-    weight: 45
+    weight: 30
   - name: Upcoming Events
     url: /#events
-    weight: 46
-  - name: Teaching
-    url: /#teaching
-    weight: 50
-  - name: Supervision
-    url: supervision/
-    weight: 55
+    weight: 35
+  - name: Talks
+    url: /#talks
+    weight: 40
   - name: Projects
     url: projects/
-    weight: 60
+    weight: 50
+  - name: Experience
+    url: experience/
+    weight: 55
   - name: Services
     url: /#services
-    weight: 70
+    weight: 60
+  - name: Supervision
+    url: supervision/
+    weight: 80
+  - name: Teaching
+    url: /#teaching
+    weight: 85
   - name: Contact
     url: /#contact
     weight: 90
