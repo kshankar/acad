@@ -53,7 +53,6 @@ sections:
       filters:
         folders:
           - events
-        exclude_past: true
       count: 0
       order: asc
     design:
