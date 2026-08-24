@@ -1,6 +1,9 @@
 ---
 title: "Panel Moderator: \"Cybersecurity & Data Protection for Business Growth\" - SOBA 2026 Connect Penang"
-date: '2026-09-29T12:00:00+08:00'
+# Publish date kept in the past so Hugo actually builds this page (Hugo skips
+# future-dated pages by default). The real event date lives in event_start/event_end
+# below, which is what the "Upcoming Talks & Events" section's exclude_past filter uses.
+date: '2026-08-19T00:00:00+08:00'
 
 event_name: SOBA 2026 Connect Penang
 event_url: ''
