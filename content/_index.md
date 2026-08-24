@@ -46,6 +46,19 @@ sections:
     design:
       view: article-grid
       columns: 3
+  - block: collection
+    id: events
+    content:
+      title: Upcoming Talks & Events
+      filters:
+        folders:
+          - events
+        exclude_past: true
+      count: 0
+      order: asc
+    design:
+      view: article-grid
+      columns: 3
   - block: resume-awards
     id: accomplishments
     content:
