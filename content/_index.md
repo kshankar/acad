@@ -172,6 +172,17 @@ sections:
         - USM Industry Liaison Fellow
         - USM Cyber Security Awareness Program - Subject Matter Expert
         - HRD Corp Accredited Trainer, Human Resource Development Corporation
+        - External Advisor, Bachelor of Information Technology (Honours) Communications and Networking, Universiti Tunku Abdul Rahman *(2025–2027)*
+        - External Examiner, BINUS Software Engineering Course, Bina Nusantara University *(2017)*
+
+        ## **Visiting Appointments**
+        - Adjunct Professor, Faculty of Vocational Studies, Universitas Brawijaya *(Oct 2024 – Sep 2025)*
+        - Visiting Lecturer, Faculty of Vocational Studies, Universitas Brawijaya *(Oct 2023)*
+        - Guest Lecturer, Vocational Studies Department, Universitas Brawijaya *(Oct 2023)*
+        - Guest Lecturer, "Data Analytics with Python", Program Pendidikan Vokasi, Universitas Brawijaya *(Apr–May 2019)*
+        - Visiting Scientist, Fraunhofer Singapore *(Mar 2018)*
+        - Visiting Lecturer, Universitas Brawijaya *(May 2017)*
+        - Guest Lecturer, Software Engineering Course, Bina Nusantara University (BINUS) *(May 2017)*
     design:
       columns: '2'
   - block: collection
