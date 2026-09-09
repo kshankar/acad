@@ -38,7 +38,13 @@
   {{ $type_text = "text-slate-900 dark:text-slate-200" }}
 {{ end }}
 
-<div class="pub-list-item view-citation" style="margin-bottom: 1.25rem">
+{{/* Plain-text blob for client-side search filtering (title, authors, venue) */}}
+{{ $authors_list := $item.Params.authors }}
+{{ if not (reflect.IsSlice $authors_list) }}{{ $authors_list = slice $authors_list }}{{ end }}
+{{ $authors_text := delimit $authors_list " " }}
+{{ $search_text := lower (printf "%s %s %s" $item.Title $authors_text $pub.name) }}
+
+<div class="pub-list-item view-citation" data-pub-type="{{ $pub_type_csl }}" data-pub-search="{{ $search_text }}" style="margin-bottom: 1.25rem">
   <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
 
   {{/* APA Style */}}

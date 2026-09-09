@@ -1,0 +1,155 @@
+{{/*
+  Local override of hbx/layouts/list.html scoped to the "publications" section.
+
+  Differences from upstream:
+  - Lists every publication on one page (no pagination / "Next" button).
+  - Adds a live search box (title / authors / venue) and publication-type
+    tabs above the list; both filter client-side via a small inline script,
+    reading the data-pub-type / data-pub-search attributes emitted by the
+    local citation view override (layouts/_partials/views/citation.html).
+*/}}
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{ $view := .Params.view | default "citation" }}
+{{ $block := . }}
+{{ $pages := .Pages.ByDate.Reverse }}
+
+{{ $config := dict
+  "columns" (.Params.columns | default 2)
+  "len" (len $pages)
+  "fill_image" (.Params.fill_image | default true)
+  "show_date" (.Params.show_date | default true)
+  "show_read_time" (.Params.show_read_time | default true)
+  "show_read_more" (.Params.show_read_more | default true)
+}}
+
+{{/* Check if any pages have author_notes to enable Alpine.js */}}
+{{ range $pages }}
+  {{ if isset .Params "author_notes" }}
+    {{ $.Store.Set "has_alpine" true }}
+    {{ break }}
+  {{ end }}
+{{ end }}
+
+{{/* Tally publication types present, most common first, for the filter tabs */}}
+{{ $typeCounts := dict }}
+{{ range $pages }}
+  {{ $types := .Params.publication_types }}
+  {{ if reflect.IsSlice $types }}
+    {{ with index $types 0 }}
+      {{ $slug := . }}
+      {{ $cur := index $typeCounts $slug | default 0 }}
+      {{ $typeCounts = merge $typeCounts (dict $slug (add $cur 1)) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $typeList := slice }}
+{{ range $slug, $count := $typeCounts }}
+  {{ $label := i18n (printf "pub_%s" (strings.Replace $slug "-" "_")) | default (strings.Title $slug) }}
+  {{ $typeList = $typeList | append (dict "slug" $slug "label" $label "count" $count) }}
+{{ end }}
+{{ $typeList = sort $typeList "count" "desc" }}
+
+<div class="w-full max-w-3xl mx-auto px-6 md:px-0 mt-10">
+
+  {{/* Search box */}}
+  <div class="relative mb-5">
+    <input
+      type="text"
+      id="pub-search-input"
+      placeholder="Search by title, author, or venue…"
+      autocomplete="off"
+      class="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-2.5 pl-10 pr-4 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+    >
+    <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+    </svg>
+  </div>
+
+  {{/* Type tabs */}}
+  {{ if gt (len $typeList) 1 }}
+  <div class="flex flex-wrap gap-2 mb-8" id="pub-tabs">
+    <button type="button" data-pub-tab="all" class="pub-tab-btn is-active px-3 py-1.5 rounded-full text-sm font-medium border transition-colors bg-primary-600 text-white border-primary-600">
+      All ({{ len $pages }})
+    </button>
+    {{ range $typeList }}
+    <button type="button" data-pub-tab="{{ .slug }}" class="pub-tab-btn px-3 py-1.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+      {{ .label }} ({{ .count }})
+    </button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</div>
+
+<div class="flex flex-col items-center">
+
+  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
+
+  {{ range $index, $item := $pages }}
+  {{ partial "functions/render_view" (dict "page" . "item" $item "view" $view "index" $index "config" $config) }}
+  {{ end }}
+
+  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
+
+  <p id="pub-empty-state" class="hidden text-center text-gray-500 dark:text-gray-400 py-10">
+    No publications match your search.
+  </p>
+
+</div>
+
+<script>
+(function () {
+  var searchInput = document.getElementById('pub-search-input');
+  var tabs = document.querySelectorAll('.pub-tab-btn');
+  var items = document.querySelectorAll('.view-citation');
+  var emptyState = document.getElementById('pub-empty-state');
+  var activeType = 'all';
+
+  var ACTIVE_CLASSES = ['bg-primary-600', 'text-white', 'border-primary-600'];
+  var INACTIVE_CLASSES = ['bg-white', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300', 'border-gray-300', 'dark:border-gray-600', 'hover:bg-gray-100', 'dark:hover:bg-gray-700'];
+
+  function setActiveTab(tab) {
+    tabs.forEach(function (t) {
+      var isActive = t === tab;
+      t.classList.toggle('is-active', isActive);
+      t.classList.remove.apply(t.classList, ACTIVE_CLASSES.concat(INACTIVE_CLASSES));
+      t.classList.add.apply(t.classList, isActive ? ACTIVE_CLASSES : INACTIVE_CLASSES);
+    });
+  }
+
+  function applyFilters() {
+    var q = (searchInput && searchInput.value || '').toLowerCase().trim();
+    var visible = 0;
+    items.forEach(function (item) {
+      var matchesType = activeType === 'all' || item.getAttribute('data-pub-type') === activeType;
+      var matchesSearch = !q || (item.getAttribute('data-pub-search') || '').indexOf(q) !== -1;
+      var show = matchesType && matchesSearch;
+      item.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    if (emptyState) emptyState.classList.toggle('hidden', visible !== 0);
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      setActiveTab(tab);
+      activeType = tab.getAttribute('data-pub-tab');
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyFilters);
+  }
+})();
+</script>
+
+{{ end }}
