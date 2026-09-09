@@ -1,24 +1,14 @@
 ---
 title: 'Projects'
-date: 2024-05-19
-type: landing
+cms_exclude: true
 
-# Page sections
-sections:
-  - block: collection
-    content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
-      filters:
-        folders:
-          - projects
-      count: 0
-      order: desc
-    design:
-      view: article-grid
-      fill_image: false
-      columns: 3
-      show_date: false
-      show_read_time: false
-      show_read_more: false
+# View.
+view: article-grid
+columns: 3
+fill_image: false
+show_date: false
+show_read_time: false
+show_read_more: false
 ---
+
+Selected research grants and industry-funded projects I've worked on over the years, as Principal Investigator, Project Leader, or Co-Researcher.

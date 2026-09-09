@@ -1,0 +1,182 @@
+{{/*
+  Local override of hbx/layouts/list.html scoped to the "projects" section.
+
+  Differences from upstream:
+  - Lists every project on one page (no pagination / "Next" button).
+  - Adds a live search box (title / summary / tags) plus type tabs (built
+    from each project's `tags`) and a year filter, above the grid. All
+    filter client-side via a small inline script, reading the
+    data-item-tags / data-item-year / data-item-search attributes emitted
+    by the local card view override (layouts/_partials/views/card.html).
+*/}}
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{ $view := .Params.view | default "article-grid" }}
+{{ $block := . }}
+{{ $pages := .Pages.ByDate.Reverse }}
+
+{{ $config := dict
+  "columns" (.Params.columns | default 3)
+  "len" (len $pages)
+  "fill_image" (.Params.fill_image | default false)
+  "show_date" (.Params.show_date | default false)
+  "show_read_time" (.Params.show_read_time | default false)
+  "show_read_more" (.Params.show_read_more | default false)
+}}
+
+{{/* Check if any pages have author_notes to enable Alpine.js */}}
+{{ range $pages }}
+  {{ if isset .Params "author_notes" }}
+    {{ $.Store.Set "has_alpine" true }}
+    {{ break }}
+  {{ end }}
+{{ end }}
+
+{{/* Tally tags present across all projects, most common first, for the filter tabs */}}
+{{ $tagCounts := dict }}
+{{ range $pages }}
+  {{ $tags := .Params.tags }}
+  {{ if reflect.IsSlice $tags }}
+    {{ range $tags }}
+      {{ $tag := . }}
+      {{ $cur := index $tagCounts $tag | default 0 }}
+      {{ $tagCounts = merge $tagCounts (dict $tag (add $cur 1)) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $tagList := slice }}
+{{ range $tag, $count := $tagCounts }}
+  {{ $tagList = $tagList | append (dict "slug" (lower $tag) "label" $tag "count" $count) }}
+{{ end }}
+{{ $tagList = sort $tagList "count" "desc" }}
+
+{{/* Tally years present, most recent first, for the year select */}}
+{{ $yearCounts := dict }}
+{{ range $pages }}
+  {{ with .Date }}
+    {{ $year := .Format "2006" }}
+    {{ $cur := index $yearCounts $year | default 0 }}
+    {{ $yearCounts = merge $yearCounts (dict $year (add $cur 1)) }}
+  {{ end }}
+{{ end }}
+{{ $yearList := slice }}
+{{ range $year, $count := $yearCounts }}
+  {{ $yearList = $yearList | append (dict "year" $year "count" $count) }}
+{{ end }}
+{{ $yearList = sort $yearList "year" "desc" }}
+
+<div class="w-full max-w-3xl mx-auto px-6 md:px-0 mt-10">
+
+  {{/* Search box + year select, side by side */}}
+  <div class="flex flex-col sm:flex-row gap-3 mb-5">
+    <div class="relative flex-1">
+      <input
+        type="text"
+        id="proj-search-input"
+        placeholder="Search by title, summary, or funder…"
+        autocomplete="off"
+        class="w-full rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-2.5 pl-10 pr-4 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+      >
+      <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+    </div>
+    {{ if gt (len $yearList) 1 }}
+    <select id="proj-year-select" class="rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 py-2.5 px-4 text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500">
+      <option value="all">All Years</option>
+      {{ range $yearList }}
+      <option value="{{ .year }}">{{ .year }} ({{ .count }})</option>
+      {{ end }}
+    </select>
+    {{ end }}
+  </div>
+
+  {{/* Type tabs (from tags) */}}
+  {{ if gt (len $tagList) 1 }}
+  <div class="flex flex-wrap gap-2 mb-8" id="proj-tabs">
+    <button type="button" data-proj-tab="all" class="proj-tab-btn px-3 py-1.5 rounded-full text-sm font-medium border transition-colors bg-primary-600 text-white border-primary-600">
+      All ({{ len $pages }})
+    </button>
+    {{ range $tagList }}
+    <button type="button" data-proj-tab="{{ .slug }}" class="proj-tab-btn px-3 py-1.5 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+      {{ .label }} ({{ .count }})
+    </button>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</div>
+
+<div class="flex flex-col items-center">
+
+  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
+
+  {{ range $index, $item := $pages }}
+  {{ partial "functions/render_view" (dict "page" . "item" $item "view" $view "index" $index "config" $config) }}
+  {{ end }}
+
+  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
+
+  <p id="proj-empty-state" class="hidden text-center text-gray-500 dark:text-gray-400 py-10">
+    No projects match your search.
+  </p>
+
+</div>
+
+<script>
+(function () {
+  var searchInput = document.getElementById('proj-search-input');
+  var yearSelect = document.getElementById('proj-year-select');
+  var tabs = document.querySelectorAll('.proj-tab-btn');
+  var items = document.querySelectorAll('[data-item-search]');
+  var emptyState = document.getElementById('proj-empty-state');
+  var activeTag = 'all';
+
+  var ACTIVE_CLASSES = ['bg-primary-600', 'text-white', 'border-primary-600'];
+  var INACTIVE_CLASSES = ['bg-white', 'dark:bg-gray-800', 'text-gray-600', 'dark:text-gray-300', 'border-gray-300', 'dark:border-gray-600', 'hover:bg-gray-100', 'dark:hover:bg-gray-700'];
+
+  function setActiveTab(tab) {
+    tabs.forEach(function (t) {
+      var isActive = t === tab;
+      t.classList.remove.apply(t.classList, ACTIVE_CLASSES.concat(INACTIVE_CLASSES));
+      t.classList.add.apply(t.classList, isActive ? ACTIVE_CLASSES : INACTIVE_CLASSES);
+    });
+  }
+
+  function applyFilters() {
+    var q = (searchInput && searchInput.value || '').toLowerCase().trim();
+    var year = (yearSelect && yearSelect.value) || 'all';
+    var visible = 0;
+    items.forEach(function (item) {
+      var tags = (item.getAttribute('data-item-tags') || '').split(',');
+      var matchesTag = activeTag === 'all' || tags.indexOf(activeTag) !== -1;
+      var matchesYear = year === 'all' || item.getAttribute('data-item-year') === year;
+      var matchesSearch = !q || (item.getAttribute('data-item-search') || '').indexOf(q) !== -1;
+      var show = matchesTag && matchesYear && matchesSearch;
+      item.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    if (emptyState) emptyState.classList.toggle('hidden', visible !== 0);
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      setActiveTab(tab);
+      activeTag = tab.getAttribute('data-proj-tab');
+      applyFilters();
+    });
+  });
+
+  if (searchInput) searchInput.addEventListener('input', applyFilters);
+  if (yearSelect) yearSelect.addEventListener('change', applyFilters);
+})();
+</script>
+
+{{ end }}
