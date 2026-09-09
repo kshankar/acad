@@ -40,7 +40,7 @@ tags:
 featured: false
 
 image:
-  caption: ''
+  caption: 'GISEC Global 2026, 16–18 September, Dubai Exhibition Centre'
   focal_point: Center
 
 links: []
