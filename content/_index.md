@@ -45,6 +45,23 @@ sections:
     design:
       view: article-grid
       columns: 3
+  - block: collection
+    id: grants
+    content:
+      title: Grants & Funded Projects
+      text: Selected research grants and industry-funded projects as Principal Investigator, Project Leader, or Co-Researcher.
+      filters:
+        folders:
+          - projects
+      count: 6
+      order: desc
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 3
+      show_date: false
+      show_read_time: false
+      show_read_more: false
   - block: resume-awards
     id: accomplishments
     content:
