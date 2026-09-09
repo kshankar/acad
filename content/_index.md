@@ -98,7 +98,7 @@ sections:
       title: Talks & Invited Presentations
       subtitle: ''
       text: |-
-        Selected international invited talks and keynotes. *(See [Services](#services) for a fuller list of professional service and committee roles, or [Accomplishments](#accomplishments) for awards and recognitions.)*
+        Selected international invited talks and keynotes. *(See [Services](/experience/#services) for a fuller list of professional service and committee roles, or [Accomplishments](#accomplishments) for awards and recognitions.)*
 
         - **2026** — "Tracking the Unseen: Monitoring and Investigating P2P Botnets" (Workshop), [GISEC Global 2026](https://gisec.ae/agenda), Dubai Exhibition Centre, UAE
         - **2026** — "Cybersecurity Awareness" (Ceramah Kesedaran Keselamatan Siber), Penang International Halal Expo (PIHEX) 2026, Politeknik Seberang Perai
@@ -117,52 +117,6 @@ sections:
         - **2017** — "Awareness of Internet Security in Digital Era", Universitas Brawijaya
     design:
       columns: '1'
-  - block: markdown
-    id: services
-    content:
-      title: Services
-      subtitle: ''
-      text: |-
-        ## **Membership**
-        - Asia Pacific Advanced Network (APAN) - Security Working Group, *Chair (2026–2028; Co-Chair 2024–2026)*
-        - Malaysian Research and Education Network (MyREN) - Internet Security Working Group, *Deputy Head*
-        - Malaysian Board of Technologists (MBOT), *Professional Technologist*
-        - Cyber Security Academia Malaysia, *Member*
-        - Institute of Electrical and Electronics Engineers (IEEE), *Member (2013–2017)*
-
-        ## **Journal Reviewer**
-        - [ACM Computing Surveys (CSUR)](https://dl.acm.org/journal/csur)
-        - [IEEE Transactions on Information Forensics & Security (T-IFS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206)
-        - [IEEE Access](https://ieeeaccess.ieee.org/)
-        - [IEEE Communications Magazine](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=35)
-        - [Computer Networks - Elsevier](https://www.journals.elsevier.com/computer-networks)
-        - [Information Systems - Elsevier](https://www.journals.elsevier.com/information-systems)
-        - [Journal of Information Security and Applications (JISA) - Elsevier](https://www.journals.elsevier.com/journal-of-information-security-and-applications)
-        - [Computers and Electrical Engineering - Elsevier](https://www.journals.elsevier.com/computers-and-electrical-engineering)
-        - [International Journal of Network Management](https://onlinelibrary.wiley.com/journal/10991190)
-        - [Wireless Communications and Mobile Computing](https://onlinelibrary.wiley.com/journal/15308677)
-        - [PeerJ Computer Science](https://peerj.com/computer-science/)
-
-        ## **Committees & Assessor Roles**
-        - MRANTI Cybersecurity Technical Advisory Panel, AV Living Lab
-        - MDEC Project Monitoring Assessor / Grant Recommendation Committee
-        - USM Mobile Access Coordinator (COVID-19)
-        - USM Industry Liaison Fellow
-        - USM Cyber Security Awareness Program - Subject Matter Expert
-        - HRD Corp Accredited Trainer, Human Resource Development Corporation
-        - External Advisor, Bachelor of Information Technology (Honours) Communications and Networking, Universiti Tunku Abdul Rahman *(2025–2027)*
-        - External Examiner, BINUS Software Engineering Course, Bina Nusantara University *(2017)*
-
-        ## **Visiting Appointments**
-        - Adjunct Professor, Faculty of Vocational Studies, Universitas Brawijaya *(Oct 2024 – Sep 2025)*
-        - Visiting Lecturer, Faculty of Vocational Studies, Universitas Brawijaya *(Oct 2023)*
-        - Guest Lecturer, Vocational Studies Department, Universitas Brawijaya *(Oct 2023)*
-        - Guest Lecturer, "Data Analytics with Python", Program Pendidikan Vokasi, Universitas Brawijaya *(Apr–May 2019)*
-        - Visiting Scientist, Fraunhofer Singapore *(Mar 2018)*
-        - Visiting Lecturer, Universitas Brawijaya *(May 2017)*
-        - Guest Lecturer, Software Engineering Course, Bina Nusantara University (BINUS) *(May 2017)*
-    design:
-      columns: '2'
   - block: collection
     content:
       title: Recent Publications
@@ -176,57 +130,6 @@ sections:
     design:
       view: article-grid
       columns: 3
-  - block: markdown
-    id: teaching
-    content:
-      title: Teaching and Supervision
-      subtitle: ''
-      text: |-
-        *Courses taught at Universiti Sains Malaysia, by academic session — Postgraduate Supervision has [its own page](/supervision/).*
-
-        ## **2025/2026**
-        - Science and Engineering Research Methodology (EKC500/3)
-        - Ethical Hacking (CYY514/4)
-
-        ## **2024/2025**
-        - Science and Engineering Research Methodology (EKC500/3)
-        - Cyber Operations (CYY519/4)
-        - Cyber Security Audit and Assessment (CYY517/4)
-        - Cybersecurity Research Methodology (CYY515/4)
-        - Advanced Internet Security (CYY512/4)
-        - Internet Governance (CYY511/4)
-
-        ## **2023/2024**
-        - Science and Engineering Research Methodology (EKC500/3)
-
-        ## **2021/2022 – 2022/2023**
-        - Information Security Management and Assurance (CST339/3)
-        - Information Security & Assurance (CST233/3)
-        - Microprocessors & Embedded Systems (CST432/3)
-        - Principles of Computer Networks and Information Security (CST235/4, CSM335/4)
-        - Data Communications & Networks (CST231/3, CSM331/3)
-
-        ## **2018/2019 – 2019/2020**
-        - Introduction to Real Time Operating Systems and Applications (EES502/4)
-        - Internet Governance (CYY508/4)
-        - Internet Security (CYY503/4)
-
-        ## **2016/2017 – 2017/2018**
-        - Introduction to Real Time Operating Systems and Applications (EES502/4)
-        - Special Topics in Next Generation Internet (CYY505/4)
-        - Internet Communications Protocols (CYY502/4)
-
-        ## **Prior to 2016 @ TU Darmstadt**
-        - PNS: Protection in Networked Systems ‒ Trust, Resilience, and Privacy
-        - Seminar: Protection in Infrastructures and Networks (PIN) — Topic Supervisor
-        - Simulation and Evaluation of Computer Networks (SECoN)
-        - Seminar Telekooperation
-        - Seminar Security, Privacy, and Trust
-        - Projectpraktikum
-        - Bachelor Students Traineeship / Bachelorpraktikum
-        - Internet Praktikum
-    design:
-      columns: '2'
   - block: markdown
     id: contact
     content:

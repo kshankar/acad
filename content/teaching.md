@@ -1,10 +1,62 @@
 ---
-title: 'Postgraduate Supervision'
+title: 'Teaching & Supervision'
 date: 2026-08-20
 type: landing
 
 sections:
   - block: markdown
+    id: courses
+    content:
+      title: Courses Taught
+      subtitle: ''
+      text: |-
+        Courses taught at Universiti Sains Malaysia, by academic session.
+
+        ## **2025/2026**
+        - Science and Engineering Research Methodology (EKC500/3)
+        - Ethical Hacking (CYY514/4)
+
+        ## **2024/2025**
+        - Science and Engineering Research Methodology (EKC500/3)
+        - Cyber Operations (CYY519/4)
+        - Cyber Security Audit and Assessment (CYY517/4)
+        - Cybersecurity Research Methodology (CYY515/4)
+        - Advanced Internet Security (CYY512/4)
+        - Internet Governance (CYY511/4)
+
+        ## **2023/2024**
+        - Science and Engineering Research Methodology (EKC500/3)
+
+        ## **2021/2022 – 2022/2023**
+        - Information Security Management and Assurance (CST339/3)
+        - Information Security & Assurance (CST233/3)
+        - Microprocessors & Embedded Systems (CST432/3)
+        - Principles of Computer Networks and Information Security (CST235/4, CSM335/4)
+        - Data Communications & Networks (CST231/3, CSM331/3)
+
+        ## **2018/2019 – 2019/2020**
+        - Introduction to Real Time Operating Systems and Applications (EES502/4)
+        - Internet Governance (CYY508/4)
+        - Internet Security (CYY503/4)
+
+        ## **2016/2017 – 2017/2018**
+        - Introduction to Real Time Operating Systems and Applications (EES502/4)
+        - Special Topics in Next Generation Internet (CYY505/4)
+        - Internet Communications Protocols (CYY502/4)
+
+        ## **Prior to 2016 @ TU Darmstadt**
+        - PNS: Protection in Networked Systems ‒ Trust, Resilience, and Privacy
+        - Seminar: Protection in Infrastructures and Networks (PIN) — Topic Supervisor
+        - Simulation and Evaluation of Computer Networks (SECoN)
+        - Seminar Telekooperation
+        - Seminar Security, Privacy, and Trust
+        - Projectpraktikum
+        - Bachelor Students Traineeship / Bachelorpraktikum
+        - Internet Praktikum
+    design:
+      columns: '2'
+  - block: markdown
+    id: supervision
     content:
       title: Postgraduate Supervision
       subtitle: ''
