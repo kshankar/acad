@@ -100,6 +100,7 @@ sections:
       text: |-
         Selected international invited talks and keynotes. *(See [Services](#services) for a fuller list of professional service and committee roles, or [Accomplishments](#accomplishments) for awards and recognitions.)*
 
+        - **2026** — "Tracking the Unseen: Monitoring and Investigating P2P Botnets" (Workshop), [GISEC Global 2026](https://gisec.ae/agenda), Dubai Exhibition Centre, UAE
         - **2026** — "Cybersecurity Awareness" (Ceramah Kesedaran Keselamatan Siber), Penang International Halal Expo (PIHEX) 2026, Politeknik Seberang Perai
         - **2025** — "Cybersecurity Concerns for Energy Domain", ERIA/ERAB Cyber and Physical System Security Workshop, Kuala Lumpur
         - **2024** — "Cybersecurity Best Practices in Academic Environment", Universitas Brawijaya (Launch of UB-CSIRT)
