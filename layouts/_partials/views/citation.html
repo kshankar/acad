@@ -1,0 +1,89 @@
+{{/* Local override of hbx/views/citation to add a publication-type badge + tags. */}}
+{{ $item := .item }}
+{{ $year_value := $item.Params.event_start | default $item.Date }}
+{{ $year := (time $year_value).Format "2006" }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $pub := partial "functions/resolve_publication.html" $item }}
+{{ $top_award := "" }}
+{{ with $item.Params.awards }}{{ $top_award = index . 0 }}{{ end }}
+
+{{/* Resolve a human-readable publication type label + colour, same convention as layouts/single.html */}}
+{{ $pub_type_csl := "" }}
+{{ $pub_type_display := "" }}
+{{ if $item.Params.publication_types }}
+  {{ if reflect.IsSlice $item.Params.publication_types }}
+    {{ $pub_type_csl = index $item.Params.publication_types 0 }}
+    {{ $pub_type_display = i18n (printf "pub_%s" (strings.Replace $pub_type_csl "-" "_")) | default (strings.Title $pub_type_csl) }}
+  {{ end }}
+{{ end }}
+{{ $type_bg := "bg-gray-100 dark:bg-gray-800" }}
+{{ $type_text := "text-gray-700 dark:text-gray-300" }}
+{{ if eq $pub_type_csl "article-journal" }}
+  {{ $type_bg = "bg-sky-100 dark:bg-sky-900/40" }}
+  {{ $type_text = "text-sky-900 dark:text-sky-200" }}
+{{ else if eq $pub_type_csl "paper-conference" }}
+  {{ $type_bg = "bg-violet-100 dark:bg-violet-900/40" }}
+  {{ $type_text = "text-violet-900 dark:text-violet-200" }}
+{{ else if eq $pub_type_csl "chapter" }}
+  {{ $type_bg = "bg-emerald-100 dark:bg-emerald-900/40" }}
+  {{ $type_text = "text-emerald-900 dark:text-emerald-200" }}
+{{ else if eq $pub_type_csl "thesis" }}
+  {{ $type_bg = "bg-amber-100 dark:bg-amber-900/40" }}
+  {{ $type_text = "text-amber-900 dark:text-amber-200" }}
+{{ else if eq $pub_type_csl "book" }}
+  {{ $type_bg = "bg-rose-100 dark:bg-rose-900/40" }}
+  {{ $type_text = "text-rose-900 dark:text-rose-200" }}
+{{ else if eq $pub_type_csl "manuscript" }}
+  {{ $type_bg = "bg-slate-100 dark:bg-slate-800/60" }}
+  {{ $type_text = "text-slate-900 dark:text-slate-200" }}
+{{ end }}
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1.25rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  {{/* APA Style */}}
+  {{ if eq (site.Params.hugoblox.content.citations.style | default "apa") "apa" }}
+
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" $item }}
+  </span>
+  ({{- $year -}}).
+  <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>.
+  {{ with $pub.display_short }}{{- . | markdownify -}}.{{ end }}
+  {{ with $top_award }}
+    <span class="ml-1">{{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}</span>
+  {{ end }}
+
+  {{/* MLA Style */}}
+  {{ else }}
+
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" $item }}.
+  </span>
+  <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>.
+  {{ with $pub.display_short }}{{- . | markdownify -}},{{ end }}
+  {{- $year -}}.
+  {{ with $top_award }}
+    <span class="ml-1">{{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}</span>
+  {{ end }}
+
+  {{ end }}
+
+  {{/* Type + tag badges */}}
+  {{ if or $pub_type_display $item.Params.tags }}
+  <div class="flex flex-wrap items-center gap-1.5 mt-1.5">
+    {{ with $pub_type_display }}
+    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold {{ $type_bg }} {{ $type_text }}">{{ . }}</span>
+    {{ end }}
+    {{ range $item.Params.tags }}
+    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">{{ . }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if $has_attachments }}
+  <div class="flex flex-wrap space-x-3 mt-1.5">
+    {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+  </div>
+  {{ end }}
+</div>
