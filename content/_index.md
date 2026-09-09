@@ -36,12 +36,11 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Recent Publications
       filters:
         folders:
           - publications
-        featured_only: true
-      count: 3
+      count: 6
       order: desc
     design:
       view: article-grid
@@ -117,19 +116,6 @@ sections:
         - **2017** — "Awareness of Internet Security in Digital Era", Universitas Brawijaya
     design:
       columns: '1'
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-      count: 8
-      order: desc
-    design:
-      view: article-grid
-      columns: 3
   - block: markdown
     id: contact
     content:
