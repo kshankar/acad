@@ -44,7 +44,7 @@
 {{ $authors_text := delimit $authors_list " " }}
 {{ $search_text := lower (printf "%s %s %s" $item.Title $authors_text $pub.name) }}
 
-<div class="pub-list-item view-citation" data-pub-type="{{ $pub_type_csl }}" data-pub-search="{{ $search_text }}" style="margin-bottom: 1.25rem">
+<div class="pub-list-item view-citation" data-pub-type="{{ $pub_type_csl }}" data-pub-year="{{ $year }}" data-pub-search="{{ $search_text }}" style="margin-bottom: 1.25rem">
   <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
 
   {{/* APA Style */}}
